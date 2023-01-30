@@ -1,17 +1,17 @@
-# leolani-mmai-parent
+# alani-game-parent
 
 Parent repository for the Leolani App. This repository uses Python 3.9.
 
 This repository contains all components of the Leolani app as _git_ submodules and can be used as the root to
 execute [build commands](https://github.com/leolani/cltl-build/tree/main/make) that are run on the components.
 
-For a description of the Leolani App see to the [README](https://github.com/leolani/cltl-leolani-app) there.
+For a description of the Alani App see to the [README](https://github.com/leolani/cltl-alani-app) there.
 
 ## Check-out
 
 To check out all code needed for the Leolani App, clone this repository including all submodules:
 
-        git clone --recurse-submodules -j8 https://github.com/leolani/leolani-mmai-parent.git
+        git clone --recurse-submodules -j8 https://github.com/leolani/alani-game-parent.git
 
 Checkout the current state of the parent
 
@@ -34,13 +34,13 @@ To push some submodule changes, go to the submodule folder and push like:
 Checkout the repository as described in [Check-out](#check-out). Then go to the repository root, build the project,
 activate the virtual environment for the Python application and run it. Altogether:
 
-        git clone --recurse-submodules -j8 https://github.com/leolani/leolani-mmai-parent.git
-        cd leolani-mmai-parent
+        git clone --recurse-submodules -j8 https://github.com/leolani/alani-game-parent.git
+        cd alani-game-parent
         make build
-        cd cltl-leolani-app
+        cd cltl-alani-app
         source venv/bin/activate
         cd py-app
-        python app-leo.py
+        python app.py
 
 You can then go to the chat interface [here](http://0.0.0.0:8000/chatui/static/chat.html) to type and see what the
 system hears. You can also see what the systems sees [here](http://0.0.0.0:8000/monitoring/static/monitoring.html).
@@ -54,7 +54,7 @@ NOTES:
 
 ### Run in the robot
 
-Please go to `cltl-leolani-app/py-app/config/default.config` and change
+Please go to `cltl-alani-app/py-app/config/default.config` and change
 
 * the `server_image_url` and `server_audio_url` fields under `[cltl.backend]`
 * the `remote_url` field under `[cltl.backend.text_output]`
@@ -68,7 +68,7 @@ Please go to `cltl-leolani-app/py-app/config/default.config` and change
   checkout in that folder. For example, the error:
 
   ``` bash
-  error: util/make/makefile.parent.mk:57: /YOUR_PATH/leolani-mmai-parent/cltl-face-recognition/makefile.d: No such file or directory
+  error: util/make/makefile.parent.mk:57: /YOUR_PATH/alani-game-parent/cltl-face-recognition/makefile.d: No such file or directory
   ```
 
   Would need to got to the `face-recognition` module and run:
